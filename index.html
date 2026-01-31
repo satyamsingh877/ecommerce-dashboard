@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <h2>E-Shop Admin</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="active"><i class="fas fa-chart-line"></i> Dashboard</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Orders</a>
+                <a href="#"><i class="fas fa-box"></i> Products</a>
+                <a href="#"><i class="fas fa-users"></i> Customers</a>
+                <a href="#"><i class="fas fa-chart-pie"></i> Analytics</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>Dashboard Overview</h1>
+                    <p>Welcome back, Admin!</p>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Admin+User&background=4F46E5&color=fff" alt="Admin">
+                        <span>Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e3f2fd;">
+                        <i class="fas fa-shopping-cart" style="color: #2196f3;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-orders">1,254</h3>
+                        <p>Total Orders</p>
+                    </div>
+                    <div class="stat-change positive">
+                        <i class="fas fa-arrow-up"></i> 12%
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #f3e5f5;">
+                        <i class="fas fa-dollar-sign" style="color: #9c27b0;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-revenue">$24,580</h3>
+                        <p>Total Revenue</p>
+                    </div>
+                    <div class="stat-change positive">
+                        <i class="fas fa-arrow-up"></i> 8%
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e8f5e9;">
+                        <i class="fas fa-users" style="color: #4caf50;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-customers">3,847</h3>
+                        <p>Total Customers</p>
+                    </div>
+                    <div class="stat-change positive">
+                        <i class="fas fa-arrow-up"></i> 5%
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #fff3e0;">
+                        <i class="fas fa-box" style="color: #ff9800;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-products">458</h3>
+                        <p>Total Products</p>
+                    </div>
+                    <div class="stat-change negative">
+                        <i class="fas fa-arrow-down"></i> 2%
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts and Tables Section -->
+            <div class="content-grid">
+                <!-- Recent Orders -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Recent Orders</h3>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="orders-table-body">
+                                <!-- Orders will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Top Products -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Top Products</h3>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <ul class="product-list" id="product-list">
+                            <!-- Products will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>© 2024 E-Commerce Dashboard. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
